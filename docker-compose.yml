@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  ngerp:
+    container_name: "ngerp"
+    image: emaco/ngerp:0.0.1
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - .:/uploads/media/
+
+    environment:
+      - MEDIA_ROOT=/uploads/media/
+      - MSSQL_HOST=host.docker.internal
+      - MSSQL_NAME=ngerp
+      - MSSQL_USER=sa
+      - MSSQL_PASSWORD=123
