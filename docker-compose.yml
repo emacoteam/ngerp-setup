@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ngerp:
     container_name: "ngerp"
-    image: emaco/ngerp:0.0.1
+    image: emaco/ngerp:0.0.2
     extra_hosts:
       - "host.docker.internal:172.17.0.1"
     restart: always
@@ -17,4 +17,4 @@ services:
       - MSSQL_HOST=host.docker.internal
       - MSSQL_NAME=ngerp
       - MSSQL_USER=sa
-      - MSSQL_PASSWORD=123
+      - MSSQL_PASSWORD=Mssql@12345
