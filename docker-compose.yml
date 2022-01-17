@@ -13,6 +13,8 @@ services:
       - .:/uploads/media/
 
     environment:
+      - DJANGO_SETTINGS_MODULE=ngerp.settings
+      - SECRET_KEY=YOUR_DOMAIN_SECRET_KEY
       - MEDIA_ROOT=/uploads/media/
       - MSSQL_HOST=host.docker.internal
       - MSSQL_NAME=ngerp
